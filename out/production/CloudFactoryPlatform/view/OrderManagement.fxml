@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.OrderManageController">
+   <children>
+      <Label layoutX="216.0" layoutY="49.0" text="订 单 管 理">
+         <font>
+            <Font name="Microsoft YaHei UI" size="28.0" />
+         </font>
+      </Label>
+      <Label layoutX="129.0" layoutY="86.0" prefHeight="56.0" prefWidth="312.0" style="-fx-background-radius: 20;" text="ORDER  MANAGEMENT">
+         <font>
+            <Font name="Ink Free" size="29.0" />
+         </font>
+      </Label>
+      <TableView fx:id="table" editable="true" layoutX="14.0" layoutY="158.0" prefHeight="460.0" prefWidth="863.0" AnchorPane.leftAnchor="14.0">
+        <columns>
+          <TableColumn fx:id="idCol" editable="false" prefWidth="110.66665649414062" text="订单编号" />
+          <TableColumn fx:id="nameCol" editable="false" prefWidth="75.0" text="订单名称" />
+            <TableColumn fx:id="proCol" editable="false" prefWidth="75.0" text="产品名称" />
+            <TableColumn fx:id="priceCol" editable="false" prefWidth="75.0" text="竞标价格" />
+            <TableColumn fx:id="numCol" editable="false" prefWidth="75.0" text="产品数量" />
+            <TableColumn fx:id="payDateCol" editable="false" prefWidth="100.0" text="交付时间" />
+            <TableColumn fx:id="ddlCol" editable="false" prefWidth="100.0" text="投标截止" />
+            <TableColumn fx:id="receiverCol" editable="false" prefWidth="75.0" text="接收人" />
+            <TableColumn fx:id="stateCol" prefWidth="83.0" text="订单状态 " />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <JFXButton fx:id="newOrderBT" buttonType="RAISED" layoutX="532.0" layoutY="95.0" onAction="#newOrder" prefHeight="35.0" prefWidth="83.0" style="-fx-background-color: ead0d1; -fx-background-radius: 10;" text="新建" textFill="#868585">
+         <font>
+            <Font name="YouYuan" size="19.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="editOrderBT" buttonType="RAISED" layoutX="632.0" layoutY="95.0" onAction="#modifyOrder" prefHeight="35.0" prefWidth="83.0" style="-fx-background-color: ead0d1; -fx-background-radius: 10;" text="修改" textFill="#868585">
+         <font>
+            <Font name="YouYuan" size="19.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="delOrderBT" buttonType="RAISED" layoutX="734.0" layoutY="95.0" onAction="#delOrder" prefHeight="35.0" prefWidth="83.0" style="-fx-background-color: ead0d1; -fx-background-radius: 10;" text="删除" textFill="#868585">
+         <font>
+            <Font name="YouYuan" size="19.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="tenderWinButton" buttonType="RAISED" layoutX="670.0" layoutY="31.0" onAction="#tenderWinHandled" prefHeight="39.0" prefWidth="128.0" style="-fx-background-color: ead0d1; -fx-background-radius: 10;" text="中标" textFill="#868585">
+         <font>
+            <Font name="YouYuan" size="19.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>
